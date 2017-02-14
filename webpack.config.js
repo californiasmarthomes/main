@@ -8,7 +8,7 @@ var config = {
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
-    publicPath: 'http://localhost:8080/public',
+    publicPath: 'http://localhost:8080/public/',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'src/client'),
