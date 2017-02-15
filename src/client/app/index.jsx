@@ -1,14 +1,15 @@
 import {render} from 'react-dom';
 import Navbar from 'components/navbar';
+import Intro from 'components/intro';
 
 require('./stylesheets/main.scss');
 
 class App extends React.Component {
   render () {
     return (
-      <div>
+      <div class="container">
         <Navbar />
-        <div className="hello">test</div>
+        <Intro />
       </div>
     );
   }

@@ -1,4 +1,3 @@
-import classnames from 'classnames';
 import {render} from 'react-dom';
 
 export default class Navbar extends React.Component {
@@ -11,7 +10,7 @@ export default class Navbar extends React.Component {
                 <div className="col s12">
                   <a href="#" className="brand-logo">Logo</a>
                   <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><a href="sass.html">Some3</a></li>
+                    <li><a href="sass.html">Some</a></li>
                     <li><a href="badges.html">Components</a></li>
                     <li><a href="collapsible.html">JavaScript</a></li>
                   </ul>
