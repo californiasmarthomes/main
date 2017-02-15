@@ -15,8 +15,13 @@ var config = {
     compress: true,
     port: 8080,
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+        'React':     'react',
+    })
+  ],
   module : {
-    loaders : [
+      loaders : [
       {
         test : /\.jsx?/,
         include : APP_DIR,
@@ -42,6 +47,17 @@ var config = {
         loader : 'file-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    alias: {
+     components: './components'
+    },
+// this does not work
+//    modules: [
+//      path.resolve(APP_DIR),
+//      path.resolve('./node_modules'),
+//    ],
   }
 };
 
