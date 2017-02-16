@@ -46,13 +46,18 @@ var config = {
       {
         test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader : 'file-loader'
-      }
+      },
+      {
+        test   : /\.(jpg|gif|png)?$/,
+        loader : 'file-loader'
+      },
     ]
   },
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-     components: './components'
+     components: './components',
+     images: '../images',
     },
 // this does not work
 //    modules: [
