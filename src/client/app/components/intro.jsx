@@ -1,10 +1,11 @@
 import {render} from 'react-dom';
+import WiFi from './wifi';
 
 export default class Intro extends React.Component {
   render () {
     return (
       <div className="intro">
-        <div class="row">
+        <div className="row">
           <div className="overlay">
             <div className="title col s12 hide-on-large-only">
                 Bring the Smarts to your Home
@@ -13,9 +14,17 @@ export default class Intro extends React.Component {
                 Bring the Smarts to your Home
             </div>
             <div className="container content">
-              Smart Home consultation and installation by a knowledgeable local professional.
+              Smart Home installation by a knowledgeable local professional.
             </div>
           </div>
+        </div>
+        <div className="row">
+          <WiFi/>
+          <WiFi/>
+          <WiFi/>
+          <WiFi/>
+          <WiFi/>
+          <WiFi/>
         </div>
         <div>Voice control</div>
         <div>Lighting</div>
