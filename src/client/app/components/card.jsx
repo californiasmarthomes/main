@@ -10,6 +10,7 @@ export default class Card extends React.Component {
   render () {
     return (
       <div>
+        here: <i className="fa fa-wifi fa-5x" aria-hidden="true"></i>
         <div className="col s12 m6 l3">
           <div className="card noshadow">
             <div className="card-image">
