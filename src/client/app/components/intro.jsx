@@ -1,5 +1,5 @@
 import {render} from 'react-dom';
-import WiFi from './wifi';
+import Card from './card';
 
 export default class Intro extends React.Component {
   render () {
@@ -14,17 +14,20 @@ export default class Intro extends React.Component {
                 Bring the Smarts to your Home
             </div>
             <div className="container content">
-              Smart Home installation by a knowledgeable local professional.
+              <p>Smart Home installation by a knowledgeable local professional.</p>
+              <p>Located in Saint Helena, CA and serving the greater Napa area.</p>
             </div>
           </div>
         </div>
         <div className="row">
-          <WiFi/>
-          <WiFi/>
-          <WiFi/>
-          <WiFi/>
-          <WiFi/>
-          <WiFi/>
+          <Card
+            title="WiFi"
+            content="A solid WiFi network is what makes your Smart Home tick" />
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
         </div>
         <div>Voice control</div>
         <div>Lighting</div>
