@@ -8,18 +8,16 @@ export default class Card extends React.Component {
   }
 
   render () {
+    const iconClasses = "icon fa fa-4x fa-" + this.props.icon;
     return (
-      <div>
-        here: <i className="fa fa-wifi fa-5x" aria-hidden="true"></i>
-        <div className="col s12 m6 l3">
-          <div className="card noshadow">
-            <div className="card-image">
-              <img src={office} />
-              <span className="card-title">{this.props.title}</span>
-            </div>
-            <div className="card-content">
-              <p className="flow-text">{this.props.content}</p>
-            </div>
+      <div className="col s12 m12 l4">
+        <div className="fixed-card">
+          <i className={iconClasses} aria-hidden="true" />
+          <div className="title">
+            {this.props.title}
+          </div>
+          <div className="content">
+            {this.props.content}
           </div>
         </div>
       </div>

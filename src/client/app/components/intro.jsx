@@ -1,5 +1,4 @@
 import {render} from 'react-dom';
-import Card from './card';
 
 export default class Intro extends React.Component {
   render () {
@@ -19,23 +18,6 @@ export default class Intro extends React.Component {
             </div>
           </div>
         </div>
-        <div className="row">
-          <Card
-            title="WiFi"
-            content="A solid WiFi network is what makes your Smart Home tick" />
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-        </div>
-        <div>Voice control</div>
-        <div>Lighting</div>
-        <div>Climate Control (thermostats, fans)</div>
-        <div>Networking WIFI</div>
-        <div>Audio</div>
-        <div>TV</div>
-        <div>Security</div>
       </div>
     );
   }

@@ -18,7 +18,7 @@ var config = {
   plugins: [
     new webpack.ProvidePlugin({
         'React':     'react',
-        'classnames':     'classnames',
+        'classNames':     'classnames',
     })
   ],
   module : {
