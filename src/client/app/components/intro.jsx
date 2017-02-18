@@ -11,7 +11,6 @@ export default class Intro extends React.Component {
             </div>
             <div className="container content">
               <p>Smart Home installation by a knowledgeable local professional.</p>
-              <p>Located in Saint Helena, CA and serving the greater Napa area.</p>
             </div>
           </div>
         </div>
