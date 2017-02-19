@@ -43,7 +43,8 @@ export default class ContactForm extends React.Component {
 
   render () {
     return (
-      <div className="container">
+      <div className="contact container">
+      <h4>Send us a Note</h4>
         <div className="row">
             <form className="col s12" onSubmit={this.handleSubmit.bind(this)}>
               <div className="row">
