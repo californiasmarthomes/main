@@ -24,11 +24,19 @@ export default class Cards extends React.Component {
             content="fans and thermostats A solid WiFi network is what makes your Smart Home tick" />
           <Card
             icon="volume-up"
-            title="Audio/Video"
+            title="Audio"
             content="fans and thermostats A solid WiFi network is what makes your Smart Home tick" />
+          <Card
+            icon="television"
+            title="Video"
+            content="amazon tv, roku" />
           <Card
             icon="shield"
             title="Security"
+            content="fans and thermostats A solid WiFi network is what makes your Smart Home tick" />
+          <Card
+            icon="window-maximize"
+            title="Window Coverings"
             content="fans and thermostats A solid WiFi network is what makes your Smart Home tick" />
         </div>
       </div>

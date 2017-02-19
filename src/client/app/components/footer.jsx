@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
                   Located in Saint Helena, CA and serving the greater Napa area.
               </div>
               <div className="col s12 m12 l6">
-                some contentffdssddfddsfsdfsd
+                some contentffdssddfddsfsdfsd ddcvddfdfdfdf
               </div>
             </div>
           </div>

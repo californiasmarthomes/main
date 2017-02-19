@@ -9,6 +9,7 @@ var config = {
   output: {
     path: BUILD_DIR,
     publicPath: 'http://localhost:8080/public/',
+    filename: "bundle.js"
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'src/client'),
@@ -17,8 +18,8 @@ var config = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-        'React':     'react',
-        'classNames':     'classnames',
+        'React':      'react',
+        'classNames': 'classnames',
     })
   ],
   module : {
