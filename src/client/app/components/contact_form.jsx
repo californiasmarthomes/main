@@ -68,8 +68,8 @@ export default class ContactForm extends React.Component {
                   <label htmlFor="message">Message</label>
                 </div>
               </div>
-              <button className="btn waves-effect waves-light" type="submit" name="action">Submit
-                  <i className="material-icons right">send</i>
+              <button className="btn waves-effect waves-light" type="submit" name="action">Send
+                  <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
               </button>
             </form>
           </div>
