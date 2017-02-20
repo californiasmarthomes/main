@@ -7,6 +7,7 @@ export default class ContactForm extends React.Component {
     this.state = {
       isSending: false,
       iSDisabled: false,
+      isCompleted: false,
     };
   }
 
@@ -38,10 +39,12 @@ export default class ContactForm extends React.Component {
         email: this.state.email,
         message: this.state.message,
       },
-
-/* success: (data) => {
-        this.setState({data: data});
-      }, */
+      error: (data) => {
+        this.setState({
+         isCompleted: true,
+         isSending: false,
+        });
+      },
 /*      success: function(data) {
         this.setState({data: data});
       }.bind(this),
@@ -79,9 +82,11 @@ export default class ContactForm extends React.Component {
                 ? <div className="spinner">
                     <i className="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i><span>Sending...</span>
                   </div>
-                : <button className="btn waves-effect waves-light" type="submit" name="action">Send
-                      <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
-                  </button>
+                : (this.state.isCompleted
+                  ? <div className="spinner">Thank you! We will get back to your shortly.</div>
+                  : <button className="btn waves-effect waves-light" type="submit" name="action">Send
+                        <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
+                    </button>)
               }
             </form>
           </div>
