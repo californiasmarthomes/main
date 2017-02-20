@@ -4,7 +4,9 @@ export default class ContactForm extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isSending: false
+    };
   }
 
   setValue(field, event) {
@@ -20,6 +22,10 @@ export default class ContactForm extends React.Component {
 
    //we don't want the form to submit, so we prevent the default behavior
    e.preventDefault();
+
+   this.setState({
+     isSending: true,
+   })
 
    $.ajax({
       url: "contact",
@@ -69,9 +75,14 @@ export default class ContactForm extends React.Component {
                   <label htmlFor="message">Message</label>
                 </div>
               </div>
-              <button className="btn waves-effect waves-light" type="submit" name="action">Send
-                  <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
-              </button>
+              {this.state.isSending
+                ? <div className="spinner">
+                    <i className="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i><span>Sending...</span>
+                  </div>
+                : <button className="btn waves-effect waves-light" type="submit" name="action">Send
+                      <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
+                  </button>
+              }
             </form>
           </div>
       </div>
