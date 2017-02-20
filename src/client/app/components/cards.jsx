@@ -9,15 +9,19 @@ export default class Cards extends React.Component {
           <Card
             icon="wifi"
             title="WiFi"
-            content="A solid WiFi network is what makes your Smart Home tick. We install WiFi networks that are secure, with high device capacity and full building coverage." />
+            content="A solid WiFi network is what makes your Smart Home tick. We install secure WiFi networks providing full coverage for your home." />
           <Card
             icon="microphone"
             title="Voice Control"
-            content="Add voice control to turn on your lights, listen to music, set alarms. The ultimate hand free experience." />
+            content="Add voice control to turn on your lights, listen to music and set alarms. It's the ultimate hands free experience." />
           <Card
             icon="lightbulb-o"
             title="Lighting"
-            content="We install dimmer and switches that can be controlled individually or as group, create presets and schedules that match your daily routine." />
+            content="We install dimmers and switches that can be controlled individually or as group, and create presets and schedules that match your daily routines." />
+          <Card
+            icon="window-maximize"
+            title="Window Coverings"
+            content="Seamlessly integrate window coverings into your Smart Home. Use voice control, a classic wall switch or remote control. Open and close your shades on a schedule or based on the amount of sunlight." />
           <Card
             icon="thermometer-half"
             title="Climate Control"
@@ -25,19 +29,15 @@ export default class Cards extends React.Component {
           <Card
             icon="volume-up"
             title="Audio"
-            content="Whether you are looking to add audiophiles speakers to stream your favorite playlist in every room, or install a wall shattering home theater without any wiring, we can help." />
+            content="Whether you want to add high end speakers to stream your favorite playlist in every room, or install a window shattering wireless home theater system, we can help." />
           <Card
             icon="television"
             title="Video"
-            content="No more cable TV bill! We install and setup TV streaming services. Access to HBO, netflix, amazon prime and most TV networks." />
+            content="No more cable TV bill! We install and setup TV streaming services. Access to HBO, Netflix, Amazon Prime and most TV networks." />
           <Card
             icon="shield"
             title="Security"
-            content="Add security features to your home, video monitoring, motion sensors or even presence simulators at a fraction of the cost of antiquated security companies." />
-          <Card
-            icon="window-maximize"
-            title="Window Coverings"
-            content="Seamlessly integrate window coverings into your Smart Home. Use voice control, a classic wall switch or remote controls. Open an dclose your shades on a schedule or based on the amount of sunlight." />
+            content="Add security features to your home with video monitoring, motion sensors or cutting edge presence simulators at a fraction of the cost of antiquated security solutions." />
         </div>
       </div>
     );
