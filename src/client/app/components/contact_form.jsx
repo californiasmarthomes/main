@@ -97,7 +97,7 @@ export default class ContactForm extends React.Component {
                       <i className="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i><span>Sending...</span>
                     </div>
                   : (this.state.isCompleted
-                    ? <div className="spinner">Thank you! We will get back to your shortly.</div>
+                    ? <div className="spinner">Message sent! We will get back to your shortly.</div>
                     : <button className="btn waves-effect waves-light" type="submit" name="action">Send
                           <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
                       </button>)
