@@ -1,19 +1,40 @@
 import {render} from 'react-dom';
+import SlideImg1 from '../images/intro_background.jpg';
 
 export default class Intro extends React.Component {
   render () {
     return (
-      <div className="intro">
-        <div className="row">
-          <div className="overlay">
-            <div className="title col s12">
-                Bring the Smarts to your Home
+      <div className="slider">
+        <ul className="slides">
+          <li>
+            <img src={SlideImg1}/>
+            <div className="caption center-align">
+              <h3>Bring the Smarts into your Home</h3>
+              <h5 className="light grey-text text-lighten-3">California Smart Home. Installation and consulting.</h5>
             </div>
-            <div className="container content">
-              <p>Smart Home installation by a knowledgeable local professional.</p>
+          </li>
+          <li>
+            <img src={SlideImg1}/>
+            <div className="caption left-align">
+              <h3>New Construction</h3>
+              <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
-          </div>
-        </div>
+          </li>
+          <li>
+            <img src={SlideImg1}/>
+            <div className="caption right-align">
+              <h3>Remodeling</h3>
+              <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src={SlideImg1}/>
+            <div className="caption center-align">
+              <h3>Technology Consulting</h3>
+              <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+        </ul>
       </div>
     );
   }

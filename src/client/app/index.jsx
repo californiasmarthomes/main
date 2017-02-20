@@ -19,8 +19,8 @@ class App extends React.Component {
       <div className="page">
         <Intro />
         <Cards />
-        <Footer />
         <ContactForm />
+        <Footer />
       </div>
     );
   }
