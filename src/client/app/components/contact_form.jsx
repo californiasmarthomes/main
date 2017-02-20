@@ -5,7 +5,8 @@ export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isSending: false
+      isSending: false,
+      iSDisabled: false,
     };
   }
 
@@ -25,6 +26,7 @@ export default class ContactForm extends React.Component {
 
    this.setState({
      isSending: true,
+     isDisabled: true,
    })
 
    $.ajax({
@@ -32,7 +34,9 @@ export default class ContactForm extends React.Component {
       dataType: 'json',
       type: 'POST',
       data: {
-        first_name: this.state.first_name,
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
       },
 
 /* success: (data) => {
@@ -54,24 +58,20 @@ export default class ContactForm extends React.Component {
         <div className="row">
             <form className="col s12" onSubmit={this.handleSubmit.bind(this)}>
               <div className="row">
-                <div className="input-field col s6">
-                  <input id="first_name" type="text" className="validate" onChange={this.setValue.bind(this, 'first_name')} />
-                  <label htmlFor="first_name">First Name</label>
-                </div>
-                <div className="input-field col s6">
-                  <input id="last_name" type="text" className="validate"/>
-                  <label htmlFor="last_name">Last Name</label>
+                <div className="input-field col s12">
+                  <input required="true" aria-required="true" disabled={this.state.isDisabled ? 'disabled' : ''} id="name" type="text" className="validate" onChange={this.setValue.bind(this, 'name')} />
+                  <label htmlFor="name">Name</label>
                 </div>
               </div>
               <div className="row">
                 <div className="input-field col s12">
-                  <input id="email" type="email" className="validate"/>
+                  <input required="true" aria-required="true" disabled={this.state.isDisabled ? 'disabled' : ''} id="email" type="email" className="validate" onChange={this.setValue.bind(this, 'email')} />
                   <label htmlFor="email">Email</label>
                 </div>
               </div>
               <div className="row">
                 <div className="input-field col s12">
-                  <textarea id="message" className="materialize-textarea"></textarea>
+                  <textarea required="true" aria-required="true" disabled={this.state.isDisabled ? 'disabled' : ''} id="message" className="materialize-textarea" onChange={this.setValue.bind(this, 'message')}></textarea>
                   <label htmlFor="message">Message</label>
                 </div>
               </div>
