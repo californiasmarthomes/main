@@ -24,7 +24,7 @@ export default class Intro extends React.Component {
             <img src={SlideImg1}/>
             <div className="caption center-align">
               <h3>Technology Consulting</h3>
-              <h5 className="light grey-text text-lighten-3">Let us be your guide through this complicated Smart Home world.</h5>
+              <h5 className="light grey-text text-lighten-3">Let us be your guide through this complex Smart Home world.</h5>
             </div>
           </li>
         </ul>

@@ -8,6 +8,7 @@ export default class ContactForm extends React.Component {
       isSending: false,
       iSDisabled: false,
       isCompleted: false,
+      isError: false,
     };
   }
 
@@ -28,6 +29,8 @@ export default class ContactForm extends React.Component {
    this.setState({
      isSending: true,
      isDisabled: true,
+     isError: false,
+     isCompleted: false,
    })
 
    $.ajax({
@@ -39,22 +42,32 @@ export default class ContactForm extends React.Component {
         email: this.state.email,
         message: this.state.message,
       },
-      error: (data) => {
+      success: (data) => {
         this.setState({
-         isCompleted: true,
          isSending: false,
+         isDisabled: true,
+         isCompleted: true,
+         isError: false,
         });
       },
-/*      success: function(data) {
-        this.setState({data: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)*/
+      error: (data) => {
+        this.setState({
+         isSending: false,
+         isDisabled: false,
+         isCompleted: false,
+         isError: true,
+        });
+      },
     });
   }
 
   render () {
+
+    let error = null;
+    if (this.state.isError) {
+      error = <div className="error">Something went wrong; try later.</div>;
+    }
+
     return (
       <div className="contact container">
       <h4>Send us a Note</h4>
@@ -78,16 +91,19 @@ export default class ContactForm extends React.Component {
                   <label htmlFor="message">Message</label>
                 </div>
               </div>
-              {this.state.isSending
-                ? <div className="spinner">
-                    <i className="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i><span>Sending...</span>
-                  </div>
-                : (this.state.isCompleted
-                  ? <div className="spinner">Thank you! We will get back to your shortly.</div>
-                  : <button className="btn waves-effect waves-light" type="submit" name="action">Send
-                        <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
-                    </button>)
-              }
+              <div className="button">
+                {this.state.isSending
+                  ? <div className="spinner">
+                      <i className="fa fa-circle-o-notch fa-spin fa-2x fa-fw"></i><span>Sending...</span>
+                    </div>
+                  : (this.state.isCompleted
+                    ? <div className="spinner">Thank you! We will get back to your shortly.</div>
+                    : <button className="btn waves-effect waves-light" type="submit" name="action">Send
+                          <i className="icon fa fa-1x fa-paper-plane right" aria-hidden="true" />
+                      </button>)
+                }
+              </div>
+              {error}
             </form>
           </div>
       </div>
