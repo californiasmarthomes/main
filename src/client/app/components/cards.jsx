@@ -29,7 +29,7 @@ export default class Cards extends React.Component {
           <Card
             icon="television"
             title="Video"
-            content="No more cable TV bill! We can install and setup TV streaming services. Access to HBO, netflix, amazon prime and most TV networks." />
+            content="No more cable TV bill! We install and setup TV streaming services. Access to HBO, netflix, amazon prime and most TV networks." />
           <Card
             icon="shield"
             title="Security"

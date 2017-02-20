@@ -10,28 +10,21 @@ export default class Intro extends React.Component {
             <img src={SlideImg1}/>
             <div className="caption center-align">
               <h3>Bring the Smarts into your Home</h3>
-              <h5 className="light grey-text text-lighten-3">California Smart Home. Installation and consulting.</h5>
-            </div>
-          </li>
-          <li>
-            <img src={SlideImg1}/>
-            <div className="caption left-align">
-              <h3>New Construction</h3>
-              <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h5 className="light grey-text text-lighten-3">California Smart Home. Installation and Consulting.</h5>
             </div>
           </li>
           <li>
             <img src={SlideImg1}/>
             <div className="caption right-align">
               <h3>Remodeling</h3>
-              <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h5 className="light grey-text text-lighten-3">No project is too small.</h5>
             </div>
           </li>
           <li>
             <img src={SlideImg1}/>
             <div className="caption center-align">
               <h3>Technology Consulting</h3>
-              <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h5 className="light grey-text text-lighten-3">Let us be your guide through this complicated Smart Home world.</h5>
             </div>
           </li>
         </ul>

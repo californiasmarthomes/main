@@ -8,7 +8,7 @@ export default class Footer extends React.Component {
             <div className="row">
               <div className="col s12">
                   <h5>California Smart Homes</h5>
-                  Located in Saint Helena, CA<br/>
+                  Saint Helena, CA<br/>
                   Serving the greater Napa area.<br/>
                   (734) 363-8367
               </div>
