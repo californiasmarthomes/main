@@ -1,2 +1,2 @@
 #!/bin/bash
-scp -r index.html public pi@192.168.1.123:~/main/src/server/root
+scp -r index.html public emetens@107.170.216.173:~/main/src/server/root
